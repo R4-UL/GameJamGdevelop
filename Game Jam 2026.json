@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 266,
+    "build": 269,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -18,6 +18,7 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "",
     "templateSlug": "",
+    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "Game Jam 2026",
     "description": "",
@@ -1189,6 +1190,57 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Jump/5b9930fb05c5d5896b5fcee8fb3f91e82536a81af773c5f1eff574155928e59d_Jump 9.aac",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "file": "top-1.png.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "top-1.png.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "idle-1.png.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "idle-1.png.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "lava_sound.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "lava_sound.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/14 - return to the planet of the lobsters.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "96674055ce2e5f270a44602ba8d340824ad3172a4cea45514e990ff70411b2a4_14 - return to the planet of the lobsters.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Ragnar Random/Fakebit Chiptune Music/96674055ce2e5f270a44602ba8d340824ad3172a4cea45514e990ff70411b2a4_14 - return to the planet of the lobsters.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/PressStart2P-Regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "44904f17cd5efc06565a08838d627234cda763a6406798f0cbbdf1cf60c676b3_PressStart2P-Regular.ttf",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Open Font License/44904f17cd5efc06565a08838d627234cda763a6406798f0cbbdf1cf60c676b3_PressStart2P-Regular.ttf",
+          "name": "gdevelop-asset-store"
+        }
       }
     ]
   },
@@ -1221,7 +1273,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3111974942445256,
+        "zoomFactor": 0.4481978045410453,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -1293,6 +1345,11 @@
         },
         {
           "name": "collectedBananas",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "lightRadius",
           "type": "number",
           "value": 0
         }
@@ -1652,23 +1709,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 3,
-          "height": 77,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Apple",
-          "persistentUuid": "f41e4d05-4a4f-4788-aed3-834c153848e3",
-          "width": 77,
-          "x": 436,
-          "y": 189,
-          "zOrder": 35,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "flippedY": true,
           "height": 0,
@@ -1816,22 +1856,6 @@
           "x": 558,
           "y": -435,
           "zOrder": 36,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "Lighting",
-          "name": "AppleLight",
-          "persistentUuid": "674b4f36-7fbe-45aa-9bf2-eb3d28615547",
-          "width": 0,
-          "x": 475,
-          "y": 224,
-          "zOrder": 37,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2054,6 +2078,139 @@
           "x": 256,
           "y": -1048,
           "zOrder": 40,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 52,
+          "keepRatio": true,
+          "layer": "",
+          "name": "lavaTop",
+          "persistentUuid": "0c0c218f-f88b-4c7a-b6bf-b8f9a1da5176",
+          "width": 1054,
+          "x": -100,
+          "y": 1168,
+          "zOrder": 41,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1050,
+          "keepRatio": true,
+          "layer": "",
+          "name": "lavaInside",
+          "persistentUuid": "cd6a7e82-17d5-4615-b4f2-ddeddb362d4a",
+          "width": 1054,
+          "x": -100,
+          "y": 1211,
+          "zOrder": 42,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Lighting",
+          "name": "BananaLight",
+          "persistentUuid": "7a3f6c40-9eba-4326-9d13-8771ff2d8040",
+          "width": 0,
+          "x": 475,
+          "y": 200,
+          "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 3,
+          "height": 93,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Banana",
+          "persistentUuid": "153a12e6-8a2d-41fb-a096-b7e4f5d93111",
+          "width": 93,
+          "x": 429,
+          "y": 155,
+          "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Lighting",
+          "name": "BananaLight",
+          "persistentUuid": "81a817ab-c4d2-4f10-8d3a-4f63647e3819",
+          "width": 0,
+          "x": 291,
+          "y": -845,
+          "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 3,
+          "height": 93,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Banana",
+          "persistentUuid": "8b44b0ca-b145-4bf7-9255-0e4bc9a502aa",
+          "width": 93,
+          "x": 245,
+          "y": -890,
+          "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Lighting",
+          "name": "BananaLight",
+          "persistentUuid": "eb8ec858-af0a-40e3-b6cf-65016746a22d",
+          "width": 0,
+          "x": 618,
+          "y": 584,
+          "zOrder": 38,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 3,
+          "height": 93,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Banana",
+          "persistentUuid": "7d2aedb6-69c0-4af9-9c1b-452c6d5220b5",
+          "width": 93,
+          "x": 572,
+          "y": 539,
+          "zOrder": 36,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2767,9 +2924,9 @@
           "effects": [],
           "behaviors": [],
           "string": "Press 'r' to restart",
-          "font": "",
+          "font": "44904f17cd5efc06565a08838d627234cda763a6406798f0cbbdf1cf60c676b3_PressStart2P-Regular.ttf",
           "textAlignment": "center",
-          "characterSize": 50,
+          "characterSize": 20,
           "color": {
             "b": 0,
             "g": 0,
@@ -2790,10 +2947,10 @@
             "smoothed": true,
             "underlined": false,
             "text": "Press 'r' to restart",
-            "font": "",
+            "font": "44904f17cd5efc06565a08838d627234cda763a6406798f0cbbdf1cf60c676b3_PressStart2P-Regular.ttf",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
-            "characterSize": 50,
+            "characterSize": 20,
             "lineHeight": 0,
             "color": "255;0;0"
           }
@@ -2814,21 +2971,21 @@
               "PlatformerCharacter": "PlatformerObject"
             },
             {
+              "ignoreDefaultControls": false,
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "acceleration": 4000,
               "canGoDownFromJumpthru": true,
               "canGrabPlatforms": false,
               "canGrabWithoutMoving": true,
               "deceleration": 1500,
               "gravity": 1000,
-              "ignoreDefaultControls": false,
               "jumpSpeed": 1000,
               "jumpSustainTime": 0.2,
               "ladderClimbingSpeed": 150,
               "maxFallingSpeed": 1400,
               "maxSpeed": 500,
-              "name": "PlatformerObject",
               "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
               "useLegacyTrajectory": false,
               "useRepeatedJump": false,
               "xGrabTolerance": 10,
@@ -4184,7 +4341,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
@@ -4815,7 +4972,7 @@
           "effects": [],
           "behaviors": [],
           "content": {
-            "radius": 50,
+            "radius": 100,
             "color": "248;231;28",
             "debugMode": false,
             "texture": ""
@@ -4926,6 +5083,30 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "lavaTop",
+          "persistentUuid": "ad8b4848-9f54-43b7-9707-38596289e02e",
+          "texture": "top-1.png.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "lavaInside",
+          "persistentUuid": "2384946e-0eeb-4e1c-b349-f7d8d1424a4c",
+          "texture": "idle-1.png.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -5017,6 +5198,12 @@
           },
           {
             "objectName": "SpikeBall"
+          },
+          {
+            "objectName": "lavaTop"
+          },
+          {
+            "objectName": "lavaInside"
           }
         ]
       },
@@ -5486,6 +5673,74 @@
               },
               "parameters": [
                 "ColliderHelper",
+                "lavaTop",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isDead",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "isDead",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "DeadText",
+                "145",
+                "MainChar.Y() - 150",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "MainChar",
+                "Animation",
+                "=",
+                "\"dead\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "ColliderHelper",
                 "Meta",
                 "",
                 "",
@@ -5538,6 +5793,7 @@
           "actions": []
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5585,6 +5841,15 @@
                 "Light",
                 "500"
               ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Apple",
+                "Apple"
+              ]
             }
           ]
         },
@@ -5631,6 +5896,55 @@
                 "=",
                 "collectedBananas"
               ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Banana",
+                "Apple"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "lightRadius",
+                "=",
+                "lightRadius + 1000"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "BananaLight",
+                    "Banana",
+                    "",
+                    "",
+                    "no"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "BananaLight",
+                    "Apple"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -5657,6 +5971,25 @@
                 "DeadText",
                 "=",
                 "MainChar.Y() - 150"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IgnoreDefaultControls"
+              },
+              "parameters": [
+                "ColliderHelper",
+                "PlatformerObject",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "StopSoundChannel"
+              },
+              "parameters": [
+                "",
+                "1"
               ]
             }
           ]
@@ -5803,7 +6136,191 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": []
+          "actions": [
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "lavaTop",
+                "=",
+                "sin(TimeFromStart() * 3) * 30"
+              ]
+            },
+            {
+              "type": {
+                "value": "TiledSpriteObject::XOffset"
+              },
+              "parameters": [
+                "lavaInside",
+                "=",
+                "sin(TimeFromStart() * 3) * 30"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetSoundChannelVolume"
+              },
+              "parameters": [
+                "",
+                "1",
+                "=",
+                "clamp(100 - (MainChar.Distance(lava_top) / 8), 0, 100)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AddForceTowardPosition"
+              },
+              "parameters": [
+                "lavaTop",
+                "lavaTop.CenterX()",
+                "MainChar.CenterY()",
+                "100",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceTowardPosition"
+              },
+              "parameters": [
+                "lavaInside",
+                "lavaTop.CenterX()",
+                "MainChar.CenterY()",
+                "100",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundOnChannel"
+              },
+              "parameters": [
+                "",
+                "lava_sound.mp3",
+                "2",
+                "yes",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "lightRadius",
+                "=",
+                "5000"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySoundOnChannel"
+              },
+              "parameters": [
+                "",
+                "96674055ce2e5f270a44602ba8d340824ad3172a4cea45514e990ff70411b2a4_14 - return to the planet of the lobsters.aac",
+                "1",
+                "yes",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "lavaTop",
+                "Meta",
+                "",
+                "",
+                "yes"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ClearForces"
+              },
+              "parameters": [
+                "lavaTop"
+              ]
+            },
+            {
+              "type": {
+                "value": "ClearForces"
+              },
+              "parameters": [
+                "lavaInside"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Lighting::SetRadius"
+              },
+              "parameters": [
+                "Light",
+                "lightRadius"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isDead",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "lightRadius",
+                "-",
+                "10"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
